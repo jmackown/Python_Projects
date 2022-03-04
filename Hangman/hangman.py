@@ -25,8 +25,8 @@ def have_go(guess):
 		
 		if word[i] == guess:
 			answer[i] = guess
-		i = i + 1
-		
+		i += 1
+
 	return ' '.join(map(str, answer))
 
 
