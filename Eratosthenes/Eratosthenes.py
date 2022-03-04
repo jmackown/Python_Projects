@@ -23,20 +23,16 @@ def find_prime(n):
 	
 	list = []
 	c = 2
-	i = 0
-	
 	while c < n + 1:
 		list.extend([c])
-		c = c + 1
+		c += 1
 
 
-	for s in list:
+	for i, s in enumerate(list):
 		divisor = list[i]
 		for s in list:
 			if (s > divisor and s % divisor == 0):
 				list.remove(s)
-		
-		i = i + 1
 
 	specials = [0,1]
 	return specials + list
